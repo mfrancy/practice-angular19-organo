@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Livro } from './bookInterface';
 
 
@@ -10,16 +10,10 @@ import { Livro } from './bookInterface';
 })
 export class Book {
 
-  livro: Livro = {
-    titulo: "As ondas",
-    autoria: "Virginia Woolf",
-    image:  "https://th.bing.com/th/id/OIP.sr2plA3hLy4UiMA16EHHXwHaLZ?w=186&h=287&c=7&r=0&o=7&pid=1.7&rm=3",
-    favorite: false,
-    genero: 'Ficção'
-  }
+  livro = input.required<Livro>();
 
   alternarFavorito() {
-    this.livro.favorite =!this.livro.favorite
+    this.livro().favorite =!this.livro().favorite
   }
 
 }
