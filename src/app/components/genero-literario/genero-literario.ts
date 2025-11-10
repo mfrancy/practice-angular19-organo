@@ -12,5 +12,4 @@ import { GeneroLiterario } from '../book/bookInterface';
 export class GeneroLiterarioComponent {
 
   genero = input.required<GeneroLiterario>();
-  livro = livros[0]
 }
