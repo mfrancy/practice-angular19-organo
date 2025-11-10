@@ -8,7 +8,7 @@ import { Livro } from './bookInterface';
   templateUrl: './book.html',
   styleUrl: './book.css',
 })
-export class Book {
+export class LivroComponent {
 
   livro = input.required<Livro>();
 
